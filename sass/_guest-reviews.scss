@@ -1,0 +1,61 @@
+.guest-reviews {
+  background-image: url(../img/guest.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.reviews {
+  max-width: 770px;
+  margin: 0 auto;
+  background-color: rgba(#000, 0.67);
+  &__wrap {
+    padding: 0 77px 80px;
+    .reviews__comment {
+      margin-bottom: 45px;
+      color: #dde0df;
+      font-family: Gentium;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 45px;
+      position: relative;
+      &:before {
+        display: block;
+        content: "";
+        width: 32px;
+        height: 25px;
+        background-image: url(../img/quoutes.png);
+        position: absolute;
+        top: -4px;
+        left: -34px;
+      }
+    }
+    .food-ink {
+      font-family: Lato;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .reviews {
+    &__wrap {
+      padding: 0 40px 40px;
+      .reviews__comment {
+        font-size: 18px;
+      }
+    }
+  }
+  .guest-reviews {
+    background-position: center center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .reviews {
+    &__wrap {
+      padding: 0 20px 20px;
+      .reviews__comment:before {
+        top: -20px;
+        left: 0px;
+      }
+    }
+  }
+}

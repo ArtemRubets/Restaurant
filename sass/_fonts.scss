@@ -1,0 +1,40 @@
+@font-face{
+	font-family: lato;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face{
+	font-family: Gentium;
+    src: url(../fonts/GenBkBasB.ttf);
+}
+@font-face{
+	font-family: Yeseva;
+    src: url(../fonts/YesevaOne-Regular.ttf);
+}
+@font-face{
+	font-family: Open_Sans;
+	src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face{
+    font-family: Open_Sans-italic;
+	src: url(../fonts/Open_Sans/OpenSans-Italic.ttf);
+}
+@font-face{
+	font-family: Open_Sans-bold;
+    src: url(../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face{
+    font-family: Open_Sans-bold-italic;
+	src: url(../fonts/Open_Sans/OpenSans-BoldItalic.ttf);
+}
+
+@mixin font ($font-weight){
+		@if $font-weight == 400 {
+		font-family: Open_Sans;
+	  } @else if $font-weight == 4001{
+   	 	font-family: Open_Sans-italic;
+	  } @else if $font-weight == 700 {
+		font-family: Open_Sans-bold;
+	  } @else if $font-weight == 7001{
+		font-family: Open_Sans-bold-italic;
+	  }
+}

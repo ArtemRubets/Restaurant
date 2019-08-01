@@ -1,0 +1,38 @@
+.food{
+	background-image:url(../img/new-bg.png);
+	background-repeat: repeat;
+	color: #4c4c4c;
+	.section-wrap{
+		display: flex;
+	}
+	&__cook{
+		margin: 41px 0;
+		transform: translateX(30px);
+		img{
+			margin: 0 auto;
+		}
+	}
+	&-photo{
+		width: 670px;
+		height: 710px;
+		background-image:url(../img/dish.png);
+		background-repeat:no-repeat;
+		background-position: top 55px left 33px;
+	}
+}
+@media screen and(max-width: 1120px) {
+	.section-wrap{
+		flex-direction: column;
+	}
+	.food-photo{
+		width: 100%;
+		background-position: center center;
+
+	}
+}
+@media screen and(max-width: 656px){
+	.food-photo{
+		display: none;
+	}
+	
+}

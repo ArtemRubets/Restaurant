@@ -1,0 +1,131 @@
+.right-food{
+	background-image:url(../img/new-bg.png);
+	background-repeat: repeat;
+	color: #4c4c4c;
+}
+.right-food-wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.right-food__photo{
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 40px;
+	.photo{
+		margin-right: 30px;
+	}
+}
+.right-food-main{
+	padding-right: 110px;
+}
+.food-block{
+	padding-top: 0;
+	margin: 0 auto;
+}
+.form{
+	margin-top: 41px;
+	&__row{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 23px;
+	}
+	.form-input__title{
+		display: block;
+		text-align: left;
+		margin-bottom: 10px;
+		color: #c9a131;
+		font-size: 14px;
+		@include font(700);
+	}
+	.input-block{
+
+	}
+	.form__input{
+		border: 1px solid #c8c6c6;
+		padding: 10px 15px;
+		@include placeholder(#7c7c7c , 16px);
+		&:focus{
+			border: 1px solid #c89f2d;
+		}
+	}
+	.form__input_date{
+		position: relative;
+		&:after{
+			display: block;
+			position: absolute;
+			top: 0;
+    		right: 13px;
+			content: '';
+			width: 13px;
+			height: 14px;
+			cursor: pointer;
+			background-image:url(../img/calendar.png);
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.form__btn-submit{
+	@include button ( #c89f2d ,#fff , darken( #c89f2d , 20%) ,#fff);
+	display: inline-block;
+		margin-top: 6px;
+		border: none;
+		padding: 10px 62px;
+		font-size: 16px;
+		&:hover{
+			border: none;
+		}
+	}
+@media screen and (max-width: 1340px){
+	.right-food-main{
+		padding-right: 60px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.right-food-wrap{
+		flex-direction: column;
+	}
+	.right-food__photo{
+		order: 2;
+		justify-content: space-around;
+		margin-top: 50px;
+		padding-left: 0;
+		.photo{
+			margin-right: 0;
+		}
+	}
+	.right-food-main{
+		order: 1;
+		padding-right: 0;
+	}
+	.food-block{
+		max-width: 430px;
+	}
+}
+@media screen and (max-width: 700px){
+	.right-food__photo{
+		flex-direction: column;
+		.photo{
+			margin: 0 auto 30px;
+		}
+	}
+}
+@media screen and (max-width: 500px){
+	.form{
+		&__row{
+			flex-direction: column;
+		}
+		.form-row-wrap{
+			margin-bottom: 10px;
+		}
+		.form-input__title{
+			text-align: center;
+		}
+	}
+	.right-food__photo{
+		padding-left: 0;
+		.photo{
+			// margin-right: 0;
+		}
+	}
+}

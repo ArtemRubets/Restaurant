@@ -1,0 +1,36 @@
+.ingredients{
+	background-image:url(../img/salat-bg.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	overflow: hidden;
+	.ingredients-wrap{
+		max-width: 570px;
+		margin-left: auto;
+		padding: 0 80px 55px;
+		background-color: rgba(#000 , .67);
+	}
+	.ingredient__photo{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 70px;
+	}
+	.ingredient__item{
+		flex-basis: 33.333%;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 640px){
+	.ingredients{
+		.ingredients-wrap{
+			padding: 0 10px;
+		}
+		.ingredient__item{
+			flex-basis: 50%;
+			img{
+				margin: 0 auto;
+			}	
+		}
+	}	
+}
